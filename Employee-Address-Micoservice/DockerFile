@@ -1,0 +1,7 @@
+FROM java:8
+
+EXPOSE 8081
+
+ADD target/employee-address-micoservice.jar employee-address-micoservice.jar
+
+ENTRYPOINT ["java","-jar","employee-address-micoservice.jar"]

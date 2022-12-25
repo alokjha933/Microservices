@@ -1,0 +1,25 @@
+server:
+  port: 8003
+  
+spring:  application:    name: API_GATEWAY
+      cloud:    gateway:      routes:      - id: EMPLOYEE-ADDRESS-MICROSERVICE
+        uri:          lb://EMPLOYEE-ADDRESS-MICROSERVICE
+        predicates:        - Path=/EmployeeAddress/**
+        
+      - id: EMPLOYEE-CRUD-SERVICE
+        uri:
+          lb://EMPLOYEE-CRUD-SERVICE
+        predicates:
+        - Path=/api/**   
+        
+      - id: EMPLOYEE-OTHER-DETAILS-MICROSERVICE 
+        uri:
+          lb://EMPLOYEE-OTHER-DETAILS-MICROSERVICE  
+        predicates:
+        - Path=/EmployeeDtls/**
+        
+management:  endpoints:    web:      exposure:        include: hystrix.stream
+        
+
+
+      
