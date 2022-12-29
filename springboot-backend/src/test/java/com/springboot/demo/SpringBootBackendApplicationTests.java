@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.springboot.controller.EmployeeController;
-import com.springboot.model.Employee;
-import com.springboot.repository.EmployeeRepository;
+import com.springboot.demo.controller.EmployeeController;
+import com.springboot.demo.model.Employee;
+import com.springboot.demo.repository.EmployeeRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

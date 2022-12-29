@@ -12,13 +12,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.client.RestTemplate;
 
-import com.springboot.controller.EmployeeController;
+import com.springboot.demo.controller.EmployeeController;
 
 @SpringBootApplication
-@EnableAutoConfiguration
-@ComponentScan(basePackageClasses = EmployeeController.class)
-@EnableJpaRepositories("com.springboot.repository")
-@EntityScan(basePackages = { "com.springboot.model" })
 @EnableEurekaClient
 @EnableCircuitBreaker
 //@EnableHystrix
