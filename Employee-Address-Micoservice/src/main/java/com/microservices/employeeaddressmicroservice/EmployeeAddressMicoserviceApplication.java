@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @EnableCircuitBreaker
 @EnableHystrix
-
+//@ComponentScan(basePackages = "com.springboot.demo")
 public class EmployeeAddressMicoserviceApplication {
 
 	public static void main(String[] args) {
